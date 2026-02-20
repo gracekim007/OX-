@@ -1,53 +1,48 @@
-# 오답 변형 OX 문법 (별도 프로젝트)
+# OX 문법 (PWA)
 
-이 프로젝트는 **“오답만 돌리다가, 틀린 문제는 그 자리에서 AI 변형문제로 추가 훈련”**하는 용도입니다.
+Vocat에서 하던 방식(문장 → O/X → 설명)을 전용 앱으로 만든 오프라인 PWA입니다.
 
-- 프론트: 순수 HTML/CSS/JS (hash 라우팅)
-- 데이터: LocalStorage 저장
-- AI: Vercel Functions(`/api/variants`) → OpenAI API 호출 (브라우저에 키 저장하지 않음)
+## 실행(PC)
 
-## 배포 (GitHub + Vercel)
+1) 폴더에서 터미널 열기
+2) 아래 중 하나 실행
 
-1) 이 폴더를 **새 GitHub 레포**로 업로드  
-2) Vercel에서 **Import Project** (Framework: Other / Static)  
-3) Vercel 환경변수 추가
+### Python
 
-- `OPENAI_API_KEY` = OpenAI API Key
-- (선택) `OPENAI_MODEL` = 기본은 `gpt-4o-mini`
+```bash
+python -m http.server 8000
+```
 
-4) Deploy
+브라우저에서 `http://localhost:8000/` 접속
 
-## 사용 방법
+### Node
 
-1. 카테고리(덱) 만들기
-2. 문제 추가 또는 JSON 가져오기
-3. 학습을 돌려서 오답을 만들기
-4. **오답을 선택해서 틀리면** “AI 변형 n개 풀기” 버튼이 나타남
-5. 누르면 즉시 변형문제가 생성되고, 그 변형문제만 바로 풀 수 있음
+```bash
+npx serve -l 8000 .
+```
 
-## JSON 가져오기 형식
+## 폰에 앱처럼 설치
 
-아래처럼 배열이면 됩니다.
+- **Android(Chrome)**: 메뉴(⋮) → 홈 화면에 추가
+- **iPhone(Safari)**: 공유(□↑) → 홈 화면에 추가
+
+※ PWA 오프라인 기능은 https 또는 localhost 환경에서만 동작합니다.
+
+## 문제(카드) 형식
+
+앱의 `가져오기/내보내기`에서 아래 JSON 배열을 붙여넣으면 선택한 카테고리에 추가됩니다.
 
 ```json
 [
-  {"prompt":"If I were you, I would accept the offer.","answer":"O","explanation":"가정법 현재: If+과거, would+동사원형","tags":["가정법"]},
-  {"prompt":"If I was you, I would accept the offer.","answer":"X","explanation":"가정법에서는 were 사용","tags":["가정법"]}
+  {
+    "prompt": "think it better to tell the truth",
+    "answer": "O",
+    "explanation": "think + it(가목적어) + 형용사 + to V",
+    "tags": ["5형식", "가목적어"]
+  }
 ]
 ```
 
-## 주의
+## 백업
 
-- AI 출력은 100% 완벽하진 않을 수 있어요. 이상하면 카드 편집으로 수정하세요.
-- AI는 네트워크/요금이 발생할 수 있습니다.
-
-## 샘플 데이터
-
-- `sample-data/starter-cards.json` : (who/whom, 가정법, Only 도치, 분사) 기본 세트
-- `sample-data/ox-grammar-extra-cards.json` : 이전에 정리된 추가 카드 묶음
-
-앱에서 **가져오기**로 넣으면 됩니다.
-
-
-## v2 patch
-- Fixed modal close on iOS/Safari by enforcing `[hidden]` display none and bumping service worker cache.
+`전체 백업 내보내기`로 JSON 저장해두면, 새 폰에서도 그대로 복원 가능합니다.

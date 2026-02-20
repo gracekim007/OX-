@@ -1,42 +1,61 @@
-const CACHE = "ox-wrong-variant-v2";
+/* OX 문법 PWA service worker */
+
+const CACHE_NAME = 'ox-grammar-cache-v6';
 const ASSETS = [
-  "./",
-  "./index.html",
-  "./styles.css",
-  "./app.js",
-  "./manifest.json",
-  "./favicon.png",
-  "./icons/icon-192.png",
-  "./icons/icon-512.png",
-  "./icons/icon-180.png",
-  "./icons/icon-144.png",
-  "./icons/icon-96.png",
+  './',
+  './index.html',
+  './styles.css',
+  './app.js',
+  './manifest.webmanifest',
+  './icon-192.png',
+  './icon-512.png'
 ];
 
-self.addEventListener("install", (e) => {
-  e.waitUntil(
-    caches.open(CACHE).then((cache) => cache.addAll(ASSETS)).then(() => self.skipWaiting())
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME).then((cache) => cache.addAll(ASSETS))
   );
+  self.skipWaiting();
 });
 
-self.addEventListener("activate", (e) => {
-  e.waitUntil(
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
     caches.keys().then((keys) =>
-      Promise.all(keys.filter((k) => k !== CACHE).map((k) => caches.delete(k)))
-    ).then(() => self.clients.claim())
+      Promise.all(
+        keys
+          .filter((k) => k !== CACHE_NAME)
+          .map((k) => caches.delete(k))
+      )
+    )
   );
+  self.clients.claim();
 });
 
-self.addEventListener("fetch", (e) => {
-  const url = new URL(e.request.url);
+self.addEventListener('fetch', (event) => {
+  const req = event.request;
 
-  // Never cache API calls
-  if (url.pathname.startsWith("/api/")) return;
-
-  // Cache-first for same-origin assets
-  if (url.origin === location.origin) {
-    e.respondWith(
-      caches.match(e.request).then((cached) => cached || fetch(e.request))
+  // Navigation requests: serve index.html offline
+  if (req.mode === 'navigate') {
+    event.respondWith(
+      fetch(req).catch(() => caches.match('./index.html'))
     );
+    return;
   }
+
+  event.respondWith(
+    caches.match(req).then((cached) => {
+      if (cached) return cached;
+      return fetch(req)
+        .then((res) => {
+          // cache same-origin GET assets
+          const url = new URL(req.url);
+          if (req.method === 'GET' && url.origin === self.location.origin) {
+            const resClone = res.clone();
+            caches.open(CACHE_NAME).then((cache) => cache.put(req, resClone));
+          }
+          return res;
+        })
+        .catch(() => cached);
+    })
+  );
 });

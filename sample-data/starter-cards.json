@@ -1,0 +1,112 @@
+[
+  {
+    "prompt": "The man whom I think is honest is my teacher.",
+    "answer": "X",
+    "explanation": "I think (that) he is honest 구조 → he가 주어 → who가 맞음.",
+    "tags": [
+      "who/whom"
+    ]
+  },
+  {
+    "prompt": "The man whom I met yesterday is my teacher.",
+    "answer": "O",
+    "explanation": "I met him 구조 → him은 목적어 → whom 가능.",
+    "tags": [
+      "who/whom"
+    ]
+  },
+  {
+    "prompt": "If I were you, I would accept the offer.",
+    "answer": "O",
+    "explanation": "현재 사실 반대 → If + 과거형, would + 동사원형.",
+    "tags": [
+      "가정법",
+      "현재"
+    ]
+  },
+  {
+    "prompt": "If I was you, I would accept the offer.",
+    "answer": "X",
+    "explanation": "가정법에서는 were 사용.",
+    "tags": [
+      "가정법",
+      "현재"
+    ]
+  },
+  {
+    "prompt": "If she had studied harder, she would have passed the exam.",
+    "answer": "O",
+    "explanation": "과거 사실 반대 → If + had p.p., would have p.p.",
+    "tags": [
+      "가정법",
+      "과거"
+    ]
+  },
+  {
+    "prompt": "If she would have studied harder, she would have passed the exam.",
+    "answer": "X",
+    "explanation": "if절에 would 사용 불가.",
+    "tags": [
+      "가정법",
+      "과거"
+    ]
+  },
+  {
+    "prompt": "If I had known the truth, I would tell you now.",
+    "answer": "O",
+    "explanation": "과거 조건 → 현재 결과(혼합가정).",
+    "tags": [
+      "가정법",
+      "혼합"
+    ]
+  },
+  {
+    "prompt": "If I had known the truth, I would have told you now.",
+    "answer": "X",
+    "explanation": "now는 현재 의미 → would + 동사원형이 맞음.",
+    "tags": [
+      "가정법",
+      "혼합"
+    ]
+  },
+  {
+    "prompt": "Only after he left she realized the truth.",
+    "answer": "X",
+    "explanation": "Only + 부사구 문두 → 도치 필요 → did she realize.",
+    "tags": [
+      "도치"
+    ]
+  },
+  {
+    "prompt": "Only after he left did she realize the truth.",
+    "answer": "O",
+    "explanation": "조동사 did가 주어 앞으로 이동.",
+    "tags": [
+      "도치"
+    ]
+  },
+  {
+    "prompt": "The law required owners to pay heavy taxes will increase sales.",
+    "answer": "X",
+    "explanation": "required가 동사처럼 작동해 동사 2개 → requiring이 맞음.",
+    "tags": [
+      "분사"
+    ]
+  },
+  {
+    "prompt": "The law requiring owners to pay heavy taxes will increase sales.",
+    "answer": "O",
+    "explanation": "requiring은 분사수식 → will increase가 주절 동사.",
+    "tags": [
+      "분사"
+    ]
+  },
+  {
+    "prompt": "The law required by citizens was passed.",
+    "answer": "O",
+    "explanation": "required by ~ = 수동 의미(요구된 법).",
+    "tags": [
+      "분사"
+    ]
+  }
+]

@@ -1,0 +1,1298 @@
+[
+  {
+    "prompt": "The accident was happened yesterday.",
+    "answer": "X",
+    "explanation": "happen은 자동사(1형식) → 수동태 불가. (The accident happened ...)",
+    "tags": [
+      "1형식",
+      "수동태"
+    ]
+  },
+  {
+    "prompt": "The accident happened yesterday.",
+    "answer": "O",
+    "explanation": "happen은 자동사 → 목적어 없이 사용.",
+    "tags": [
+      "1형식"
+    ]
+  },
+  {
+    "prompt": "A problem was arisen during the meeting.",
+    "answer": "X",
+    "explanation": "arise는 자동사 → 수동태 불가. (A problem arose ...)",
+    "tags": [
+      "1형식",
+      "수동태"
+    ]
+  },
+  {
+    "prompt": "A problem arose during the meeting.",
+    "answer": "O",
+    "explanation": "arise(발생하다)의 과거형은 arose.",
+    "tags": [
+      "1형식"
+    ]
+  },
+  {
+    "prompt": "The team is consisted of ten members.",
+    "answer": "X",
+    "explanation": "consist of는 자동사구 → 수동태(be consisted of) 불가. (consists of)",
+    "tags": [
+      "1형식",
+      "수동태"
+    ]
+  },
+  {
+    "prompt": "The team consists of ten members.",
+    "answer": "O",
+    "explanation": "consist of: ~로 구성되다(자동사) → 능동형 사용.",
+    "tags": [
+      "1형식"
+    ]
+  },
+  {
+    "prompt": "The committee is composed of ten members.",
+    "answer": "O",
+    "explanation": "be composed of = ~로 구성되다(수동 가능 표현).",
+    "tags": [
+      "수동표현"
+    ]
+  },
+  {
+    "prompt": "The book is belonged to me.",
+    "answer": "X",
+    "explanation": "belong to는 자동사구 → 수동태 불가. (belongs to)",
+    "tags": [
+      "1형식",
+      "수동태"
+    ]
+  },
+  {
+    "prompt": "The book belongs to me.",
+    "answer": "O",
+    "explanation": "belong to: ~의 소유이다(자동사).",
+    "tags": [
+      "1형식"
+    ]
+  },
+  {
+    "prompt": "We discussed about the problem.",
+    "answer": "X",
+    "explanation": "discuss는 타동사 → discuss + 목적어. (about 불필요)",
+    "tags": [
+      "전치사X",
+      "동사"
+    ]
+  },
+  {
+    "prompt": "We discussed the problem.",
+    "answer": "O",
+    "explanation": "discuss + 목적어(about X).",
+    "tags": [
+      "전치사X",
+      "동사"
+    ]
+  },
+  {
+    "prompt": "He resembles to his father.",
+    "answer": "X",
+    "explanation": "resemble은 타동사 → to 없이 목적어 바로.",
+    "tags": [
+      "전치사X",
+      "동사"
+    ]
+  },
+  {
+    "prompt": "He resembles his father.",
+    "answer": "O",
+    "explanation": "resemble + 목적어(to X).",
+    "tags": [
+      "전치사X",
+      "동사"
+    ]
+  },
+  {
+    "prompt": "They approached to the station.",
+    "answer": "X",
+    "explanation": "approach는 타동사 → approach + 목적어(to X).",
+    "tags": [
+      "전치사X",
+      "동사"
+    ]
+  },
+  {
+    "prompt": "They approached the station.",
+    "answer": "O",
+    "explanation": "approach + 목적어(to X).",
+    "tags": [
+      "전치사X",
+      "동사"
+    ]
+  },
+  {
+    "prompt": "She married with a doctor.",
+    "answer": "X",
+    "explanation": "marry는 타동사 → marry + 사람/대상. (with X)",
+    "tags": [
+      "전치사X",
+      "동사"
+    ]
+  },
+  {
+    "prompt": "She married a doctor.",
+    "answer": "O",
+    "explanation": "marry + 목적어(with X).",
+    "tags": [
+      "전치사X",
+      "동사"
+    ]
+  },
+  {
+    "prompt": "She is married to a doctor.",
+    "answer": "O",
+    "explanation": "be married to + 사람(혼인 상태).",
+    "tags": [
+      "전치사",
+      "표현"
+    ]
+  },
+  {
+    "prompt": "Please answer to the question.",
+    "answer": "X",
+    "explanation": "answer는 타동사 → answer + 목적어(to X).",
+    "tags": [
+      "전치사X",
+      "동사"
+    ]
+  },
+  {
+    "prompt": "Please answer the question.",
+    "answer": "O",
+    "explanation": "answer + 목적어(to X).",
+    "tags": [
+      "전치사X",
+      "동사"
+    ]
+  },
+  {
+    "prompt": "We reached to the top of the mountain.",
+    "answer": "X",
+    "explanation": "reach는 타동사 → reach + 목적어(to X).",
+    "tags": [
+      "전치사X",
+      "동사"
+    ]
+  },
+  {
+    "prompt": "We reached the top of the mountain.",
+    "answer": "O",
+    "explanation": "reach + 목적어(to X).",
+    "tags": [
+      "전치사X",
+      "동사"
+    ]
+  },
+  {
+    "prompt": "He entered into the room quietly.",
+    "answer": "X",
+    "explanation": "장소에 '들어가다'는 enter + 장소(목적어). (into X)",
+    "tags": [
+      "전치사X",
+      "동사"
+    ]
+  },
+  {
+    "prompt": "He entered the room quietly.",
+    "answer": "O",
+    "explanation": "enter는 타동사 → 목적어 바로.",
+    "tags": [
+      "전치사X",
+      "동사"
+    ]
+  },
+  {
+    "prompt": "He mentioned about the accident.",
+    "answer": "X",
+    "explanation": "mention은 타동사 → mention + 목적어(about X).",
+    "tags": [
+      "전치사X",
+      "동사"
+    ]
+  },
+  {
+    "prompt": "He mentioned the accident.",
+    "answer": "O",
+    "explanation": "mention + 목적어(about X).",
+    "tags": [
+      "전치사X",
+      "동사"
+    ]
+  },
+  {
+    "prompt": "The man which lives here is my uncle.",
+    "answer": "X",
+    "explanation": "사람 선행사 → who/that. which는 사물/동물.",
+    "tags": [
+      "관계사"
+    ]
+  },
+  {
+    "prompt": "The man who lives here is my uncle.",
+    "answer": "O",
+    "explanation": "사람 선행사 + 주격 관계대명사 who.",
+    "tags": [
+      "관계사"
+    ]
+  },
+  {
+    "prompt": "I bought the book which was pretty.",
+    "answer": "O",
+    "explanation": "사물 선행사(book) → which/that 가능(주격).",
+    "tags": [
+      "관계사"
+    ]
+  },
+  {
+    "prompt": "I bought the people which were pretty.",
+    "answer": "X",
+    "explanation": "people(사람) 선행사 → who/that. which X.",
+    "tags": [
+      "관계사"
+    ]
+  },
+  {
+    "prompt": "My brother, that lives in Seoul, is a teacher.",
+    "answer": "X",
+    "explanation": "콤마(,) 있는 계속적 용법에서는 that 사용 불가.",
+    "tags": [
+      "관계사",
+      "that"
+    ]
+  },
+  {
+    "prompt": "My brother, who lives in Seoul, is a teacher.",
+    "answer": "O",
+    "explanation": "계속적 용법: who/which 사용.",
+    "tags": [
+      "관계사"
+    ]
+  },
+  {
+    "prompt": "This is the best book that I've ever read.",
+    "answer": "O",
+    "explanation": "최상급 + 명사 뒤 관계대명사 → that 선호.",
+    "tags": [
+      "관계사",
+      "that"
+    ]
+  },
+  {
+    "prompt": "The house in that I live is old.",
+    "answer": "X",
+    "explanation": "전치사 + that 불가. (in which / that ... in)",
+    "tags": [
+      "관계사",
+      "전치사+관계사"
+    ]
+  },
+  {
+    "prompt": "The house in which I live is old.",
+    "answer": "O",
+    "explanation": "전치사 + which 가능: in which.",
+    "tags": [
+      "관계사",
+      "전치사+관계사"
+    ]
+  },
+  {
+    "prompt": "I bought the book you love the most.",
+    "answer": "O",
+    "explanation": "목적격 관계대명사 생략 가능: (which/that) 생략.",
+    "tags": [
+      "관계사",
+      "생략"
+    ]
+  },
+  {
+    "prompt": "I bought the book which you love the most it.",
+    "answer": "X",
+    "explanation": "관계절은 불완전절이어야 함 → 목적어 it 중복 불가.",
+    "tags": [
+      "관계사",
+      "불완전절"
+    ]
+  },
+  {
+    "prompt": "I remember the day when he arrived.",
+    "answer": "O",
+    "explanation": "when = on/at/in which (시간 선행사).",
+    "tags": [
+      "관계부사"
+    ]
+  },
+  {
+    "prompt": "I don't remember the place where we last met.",
+    "answer": "O",
+    "explanation": "where = in/at/on which (장소 선행사).",
+    "tags": [
+      "관계부사"
+    ]
+  },
+  {
+    "prompt": "I don't remember the place which we last met.",
+    "answer": "X",
+    "explanation": "which 사용 시 전치사 필요: the place (which) we last met at.",
+    "tags": [
+      "관계부사",
+      "관계사"
+    ]
+  },
+  {
+    "prompt": "The man whose car was stolen is angry.",
+    "answer": "O",
+    "explanation": "whose + 명사 = 소유격 관계대명사.",
+    "tags": [
+      "관계사",
+      "whose"
+    ]
+  },
+  {
+    "prompt": "I know the thing what he wants.",
+    "answer": "X",
+    "explanation": "선행사(the thing) 있으면 what 사용 불가 → which/that.",
+    "tags": [
+      "명사절",
+      "what"
+    ]
+  },
+  {
+    "prompt": "I know what he wants.",
+    "answer": "O",
+    "explanation": "what = the thing which(선행사 없음) → 명사절/자유관계대명사.",
+    "tags": [
+      "명사절",
+      "what"
+    ]
+  },
+  {
+    "prompt": "You can take whatever you like.",
+    "answer": "O",
+    "explanation": "whatever = anything that → 선행사 없이 사용.",
+    "tags": [
+      "명사절",
+      "복합관계사"
+    ]
+  },
+  {
+    "prompt": "The fact is that I like her.",
+    "answer": "O",
+    "explanation": "that = 명사절 접속사(완전절 연결).",
+    "tags": [
+      "명사절",
+      "that"
+    ]
+  },
+  {
+    "prompt": "What matters is that there should always be a small audience for him.",
+    "answer": "O",
+    "explanation": "What matters(=중요한 것은) + that절(명사절) 구조.",
+    "tags": [
+      "명사절",
+      "what",
+      "that"
+    ]
+  },
+  {
+    "prompt": "He is good at play soccer.",
+    "answer": "X",
+    "explanation": "전치사 at 뒤에는 명사/동명사 → playing.",
+    "tags": [
+      "전치사",
+      "동명사"
+    ]
+  },
+  {
+    "prompt": "He is good at playing soccer.",
+    "answer": "O",
+    "explanation": "전치사 + 동명사(playing).",
+    "tags": [
+      "전치사",
+      "동명사"
+    ]
+  },
+  {
+    "prompt": "The company prohibited him from promoting to vice president.",
+    "answer": "X",
+    "explanation": "prohibit A from ~: A가 ~당하는 의미면 being p.p. 필요.",
+    "tags": [
+      "전치사",
+      "동명사",
+      "태"
+    ]
+  },
+  {
+    "prompt": "The company prohibited him from being promoted to vice president.",
+    "answer": "O",
+    "explanation": "prohibit A from being p.p.: A가 ~되다(수동 의미).",
+    "tags": [
+      "전치사",
+      "동명사",
+      "태"
+    ]
+  },
+  {
+    "prompt": "He had no choice but to leave.",
+    "answer": "O",
+    "explanation": "have no choice but to V = ~할 수밖에 없다.",
+    "tags": [
+      "표현",
+      "to부정사"
+    ]
+  },
+  {
+    "prompt": "He had no choice but leaving.",
+    "answer": "X",
+    "explanation": "have no choice but to V 구조가 기본.",
+    "tags": [
+      "표현",
+      "to부정사"
+    ]
+  },
+  {
+    "prompt": "I enjoy to eat out.",
+    "answer": "X",
+    "explanation": "enjoy는 동명사 목적어: enjoy ~ing.",
+    "tags": [
+      "준동사",
+      "동명사"
+    ]
+  },
+  {
+    "prompt": "I enjoy eating out.",
+    "answer": "O",
+    "explanation": "enjoy + V-ing.",
+    "tags": [
+      "준동사",
+      "동명사"
+    ]
+  },
+  {
+    "prompt": "I hope eating out tonight.",
+    "answer": "X",
+    "explanation": "hope는 to부정사 선호: hope to V.",
+    "tags": [
+      "준동사",
+      "to부정사"
+    ]
+  },
+  {
+    "prompt": "I hope to eat out tonight.",
+    "answer": "O",
+    "explanation": "hope + to V.",
+    "tags": [
+      "준동사",
+      "to부정사"
+    ]
+  },
+  {
+    "prompt": "They had to keep the fire to burn for days.",
+    "answer": "X",
+    "explanation": "keep + O + 목적격보어: 현재분사/형용사/과거분사 가능, to부정사 X.",
+    "tags": [
+      "5형식",
+      "to부정사"
+    ]
+  },
+  {
+    "prompt": "They had to keep the fire burning for days.",
+    "answer": "O",
+    "explanation": "keep + O + V-ing(상태 유지).",
+    "tags": [
+      "5형식",
+      "분사"
+    ]
+  },
+  {
+    "prompt": "Two factors have made it difficult for scientists to determine the number of species.",
+    "answer": "O",
+    "explanation": "make + it(가목) + 형용사 + for + 사람 + to V(진목).",
+    "tags": [
+      "가목적어",
+      "5형식"
+    ]
+  },
+  {
+    "prompt": "Two factors have made scientists difficult to determine the number of species.",
+    "answer": "X",
+    "explanation": "가목적어 it 없이 쓰면 scientists가 difficult가 되어 의미/구조가 틀어짐.",
+    "tags": [
+      "가목적어",
+      "5형식"
+    ]
+  },
+  {
+    "prompt": "Being able to speak a language means communication.",
+    "answer": "O",
+    "explanation": "동명사구 주어는 단수 취급 → means.",
+    "tags": [
+      "동명사",
+      "수일치"
+    ]
+  },
+  {
+    "prompt": "Being able to speak a language mean communication.",
+    "answer": "X",
+    "explanation": "동명사구 주어는 단수 → mean X, means O.",
+    "tags": [
+      "동명사",
+      "수일치"
+    ]
+  },
+  {
+    "prompt": "The game industry needs to adapt quickly.",
+    "answer": "O",
+    "explanation": "to부정사: need to V (to=부정사).",
+    "tags": [
+      "to부정사"
+    ]
+  },
+  {
+    "prompt": "The game industry must adapt to changing conditions.",
+    "answer": "O",
+    "explanation": "adapt to + 명사/동명사 (to=전치사).",
+    "tags": [
+      "전치사",
+      "to"
+    ]
+  },
+  {
+    "prompt": "The game industry must adapt to quickly.",
+    "answer": "X",
+    "explanation": "to가 전치사일 때 뒤에는 명사/동명사. quickly(부사) X.",
+    "tags": [
+      "전치사",
+      "to"
+    ]
+  },
+  {
+    "prompt": "Never have I met such a generous man before.",
+    "answer": "O",
+    "explanation": "부정부사(Never) 문두 → 조동사 도치.",
+    "tags": [
+      "도치"
+    ]
+  },
+  {
+    "prompt": "Never I have met such a generous man before.",
+    "answer": "X",
+    "explanation": "Never 문두면 have I처럼 도치해야 함.",
+    "tags": [
+      "도치"
+    ]
+  },
+  {
+    "prompt": "Hardly had I entered the house when you called.",
+    "answer": "O",
+    "explanation": "Hardly/Scarcely + had + S + p.p. ~ when/before ...",
+    "tags": [
+      "도치"
+    ]
+  },
+  {
+    "prompt": "Hardly have I entered the house when you called.",
+    "answer": "X",
+    "explanation": "Hardly 도치 구문은 보통 had+p.p. 형태로 출제.",
+    "tags": [
+      "도치"
+    ]
+  },
+  {
+    "prompt": "No sooner had I entered the house than the phone rang.",
+    "answer": "O",
+    "explanation": "No sooner + had + S + p.p. ~ than ...",
+    "tags": [
+      "도치"
+    ]
+  },
+  {
+    "prompt": "No sooner had I entered the house when the phone rang.",
+    "answer": "X",
+    "explanation": "No sooner는 when이 아니라 than과 호응.",
+    "tags": [
+      "도치"
+    ]
+  },
+  {
+    "prompt": "She likes reading and writing novels.",
+    "answer": "O",
+    "explanation": "병렬: reading and writing(동명사끼리 병렬).",
+    "tags": [
+      "병렬구조"
+    ]
+  },
+  {
+    "prompt": "She likes reading and to write novels.",
+    "answer": "X",
+    "explanation": "병렬은 형태를 맞춰야 함: reading and writing / to read and to write.",
+    "tags": [
+      "병렬구조"
+    ]
+  },
+  {
+    "prompt": "Not only my brother but also my friends are crazy.",
+    "answer": "O",
+    "explanation": "not only A but also B → 동사는 가까운 주어(B)에 수일치.",
+    "tags": [
+      "병렬구조",
+      "수일치"
+    ]
+  },
+  {
+    "prompt": "Not only my brother but also my friends is crazy.",
+    "answer": "X",
+    "explanation": "B가 복수(friends) → are가 맞음.",
+    "tags": [
+      "병렬구조",
+      "수일치"
+    ]
+  },
+  {
+    "prompt": "He doesn't like it. Neither do I.",
+    "answer": "O",
+    "explanation": "neither도 조동사 도치: neither + aux + S.",
+    "tags": [
+      "도치"
+    ]
+  },
+  {
+    "prompt": "He doesn't like it. Neither I do.",
+    "answer": "X",
+    "explanation": "neither 구문은 do I처럼 도치 필요.",
+    "tags": [
+      "도치"
+    ]
+  },
+  {
+    "prompt": "The population of China is larger than Japan.",
+    "answer": "X",
+    "explanation": "비교 대상 통일: population vs Japan(나라) → that of Japan.",
+    "tags": [
+      "비교",
+      "대용"
+    ]
+  },
+  {
+    "prompt": "The population of China is larger than that of Japan.",
+    "answer": "O",
+    "explanation": "that of + 명사: 앞의 단수명사(population) 대용.",
+    "tags": [
+      "비교",
+      "대용"
+    ]
+  },
+  {
+    "prompt": "He is superior than me.",
+    "answer": "X",
+    "explanation": "superior는 than이 아니라 to와 함께.",
+    "tags": [
+      "비교"
+    ]
+  },
+  {
+    "prompt": "He is superior to me.",
+    "answer": "O",
+    "explanation": "superior to / inferior to 등은 to 사용.",
+    "tags": [
+      "비교"
+    ]
+  },
+  {
+    "prompt": "John studies as happily as Mary does.",
+    "answer": "O",
+    "explanation": "동사(studies)를 꾸미므로 부사 happily 필요.",
+    "tags": [
+      "비교",
+      "부사"
+    ]
+  },
+  {
+    "prompt": "John studies as happy as Mary does.",
+    "answer": "X",
+    "explanation": "동사를 꾸미면 형용사 happy X → happily O.",
+    "tags": [
+      "비교",
+      "부사"
+    ]
+  },
+  {
+    "prompt": "A number of cars are in the museum.",
+    "answer": "O",
+    "explanation": "a number of + 복수명사 → 복수동사.",
+    "tags": [
+      "수일치"
+    ]
+  },
+  {
+    "prompt": "The number of cars in the garage is increasing.",
+    "answer": "O",
+    "explanation": "the number of + 복수명사 → 단수동사.",
+    "tags": [
+      "수일치"
+    ]
+  },
+  {
+    "prompt": "Many a student is absent today.",
+    "answer": "O",
+    "explanation": "many a + 단수명사 → 단수동사.",
+    "tags": [
+      "수일치"
+    ]
+  },
+  {
+    "prompt": "Many a student are absent today.",
+    "answer": "X",
+    "explanation": "many a + 단수명사이므로 are X.",
+    "tags": [
+      "수일치"
+    ]
+  },
+  {
+    "prompt": "The rich are not always happy.",
+    "answer": "O",
+    "explanation": "the + 형용사 = ~한 사람들(복수 취급).",
+    "tags": [
+      "수일치"
+    ]
+  },
+  {
+    "prompt": "The rich is not always happy.",
+    "answer": "X",
+    "explanation": "the + 형용사는 복수동사 사용.",
+    "tags": [
+      "수일치"
+    ]
+  },
+  {
+    "prompt": "23% of the people are sick.",
+    "answer": "O",
+    "explanation": "퍼센트/분수는 of 뒤 명사에 수일치(people=복수).",
+    "tags": [
+      "수일치"
+    ]
+  },
+  {
+    "prompt": "23% of the people is sick.",
+    "answer": "X",
+    "explanation": "people가 복수 → are가 맞음.",
+    "tags": [
+      "수일치"
+    ]
+  },
+  {
+    "prompt": "He is a teacher.",
+    "answer": "O",
+    "explanation": "가산 단수명사 직업 앞: a/an 필요.",
+    "tags": [
+      "관사"
+    ]
+  },
+  {
+    "prompt": "He is teacher.",
+    "answer": "X",
+    "explanation": "가산 단수명사 앞 관사 누락.",
+    "tags": [
+      "관사"
+    ]
+  },
+  {
+    "prompt": "My friend gave me some advice.",
+    "answer": "O",
+    "explanation": "advice는 불가산명사 → 단수 형태로 사용.",
+    "tags": [
+      "불가산명사"
+    ]
+  },
+  {
+    "prompt": "My friend gave me many advices.",
+    "answer": "X",
+    "explanation": "advice는 복수형 X.",
+    "tags": [
+      "불가산명사"
+    ]
+  },
+  {
+    "prompt": "This furniture is expensive.",
+    "answer": "O",
+    "explanation": "furniture는 불가산명사 → 단수 취급.",
+    "tags": [
+      "불가산명사",
+      "수일치"
+    ]
+  },
+  {
+    "prompt": "These furnitures are expensive.",
+    "answer": "X",
+    "explanation": "furniture는 복수형 X.",
+    "tags": [
+      "불가산명사",
+      "수일치"
+    ]
+  },
+  {
+    "prompt": "He is tall enough to reach the shelf.",
+    "answer": "O",
+    "explanation": "enough는 형용사/부사 뒤에 위치: tall enough.",
+    "tags": [
+      "어순",
+      "enough"
+    ]
+  },
+  {
+    "prompt": "He is enough tall to reach the shelf.",
+    "answer": "X",
+    "explanation": "enough 위치 오류: enough tall X → tall enough O.",
+    "tags": [
+      "어순",
+      "enough"
+    ]
+  },
+  {
+    "prompt": "She made me clean my room.",
+    "answer": "O",
+    "explanation": "사역동사 make + O + 동사원형.",
+    "tags": [
+      "사역",
+      "5형식"
+    ]
+  },
+  {
+    "prompt": "She made me to clean my room.",
+    "answer": "X",
+    "explanation": "make는 목적격보어에 to부정사 X → 동사원형.",
+    "tags": [
+      "사역",
+      "5형식"
+    ]
+  },
+  {
+    "prompt": "I was made to clean my room.",
+    "answer": "O",
+    "explanation": "사역동사 수동태: 동사원형 → to부정사로 바뀜.",
+    "tags": [
+      "사역",
+      "수동태"
+    ]
+  },
+  {
+    "prompt": "I saw him enter the building.",
+    "answer": "O",
+    "explanation": "지각동사 see + O + 동사원형/현재분사 가능.",
+    "tags": [
+      "지각동사"
+    ]
+  },
+  {
+    "prompt": "I saw him to enter the building.",
+    "answer": "X",
+    "explanation": "지각동사 뒤 목적격보어에 to부정사 X.",
+    "tags": [
+      "지각동사"
+    ]
+  },
+  {
+    "prompt": "Ken got me to use his phone.",
+    "answer": "O",
+    "explanation": "준사역 get + O + to부정사.",
+    "tags": [
+      "준사역"
+    ]
+  },
+  {
+    "prompt": "I helped him carry the bag.",
+    "answer": "O",
+    "explanation": "help + O + (to)동사원형 가능.",
+    "tags": [
+      "준사역"
+    ]
+  },
+  {
+    "prompt": "It may sound strange.",
+    "answer": "O",
+    "explanation": "감각동사(sound) 보어는 형용사 strange.",
+    "tags": [
+      "감각동사"
+    ]
+  },
+  {
+    "prompt": "It may sound strangely.",
+    "answer": "X",
+    "explanation": "감각동사 보어 자리에는 부사 X → 형용사.",
+    "tags": [
+      "감각동사"
+    ]
+  },
+  {
+    "prompt": "Despite being tired, he worked late.",
+    "answer": "O",
+    "explanation": "despite는 전치사 → 뒤에 명사/동명사.",
+    "tags": [
+      "전치사vs접속사"
+    ]
+  },
+  {
+    "prompt": "Despite he was tired, he worked late.",
+    "answer": "X",
+    "explanation": "despite 뒤에 절(S+V) X → although/though 사용.",
+    "tags": [
+      "전치사vs접속사"
+    ]
+  },
+  {
+    "prompt": "Although he was tired, he worked late.",
+    "answer": "O",
+    "explanation": "although는 접속사 → 뒤에 절(S+V).",
+    "tags": [
+      "전치사vs접속사"
+    ]
+  },
+  {
+    "prompt": "Because of the rain, the game was canceled.",
+    "answer": "O",
+    "explanation": "because of는 전치사구 → 명사 필요.",
+    "tags": [
+      "전치사vs접속사"
+    ]
+  },
+  {
+    "prompt": "Because of it rained, the game was canceled.",
+    "answer": "X",
+    "explanation": "because of 뒤에 절 X → because + 절.",
+    "tags": [
+      "전치사vs접속사"
+    ]
+  },
+  {
+    "prompt": "With the door open, the room was cold.",
+    "answer": "O",
+    "explanation": "with + O + OC(형용사/분사/전치사구).",
+    "tags": [
+      "with구문"
+    ]
+  },
+  {
+    "prompt": "With the door was open, the room was cold.",
+    "answer": "X",
+    "explanation": "with구문은 'was open' 같은 완전절을 바로 못 씀.",
+    "tags": [
+      "with구문"
+    ]
+  },
+  {
+    "prompt": "With her hands full, she couldn't open the door.",
+    "answer": "O",
+    "explanation": "with + O + 형용사구(full).",
+    "tags": [
+      "with구문"
+    ]
+  },
+  {
+    "prompt": "With sunshine streaming through the window, she felt happy.",
+    "answer": "O",
+    "explanation": "with + O + 현재분사(streaming).",
+    "tags": [
+      "with구문"
+    ]
+  },
+  {
+    "prompt": "With sunshine streamed through the window, she felt happy.",
+    "answer": "X",
+    "explanation": "with구문에는 과거시제(streamed) 같은 동사 형태 X.",
+    "tags": [
+      "with구문"
+    ]
+  },
+  {
+    "prompt": "I said that he was gone.",
+    "answer": "O",
+    "explanation": "say는 '말한 내용'을 목적어로 취함. (사람 목적어 직접 X)",
+    "tags": [
+      "say/tell"
+    ]
+  },
+  {
+    "prompt": "I said him that he was gone.",
+    "answer": "X",
+    "explanation": "say는 사람 목적어를 바로 못 씀 → said to him / told him.",
+    "tags": [
+      "say/tell"
+    ]
+  },
+  {
+    "prompt": "I told him that he was gone.",
+    "answer": "O",
+    "explanation": "tell은 사람 목적어가 먼저: tell + 사람 + 내용.",
+    "tags": [
+      "say/tell"
+    ]
+  },
+  {
+    "prompt": "I told that he was gone.",
+    "answer": "X",
+    "explanation": "tell은 사람 목적어 없이 that절을 바로 받기 어려움.",
+    "tags": [
+      "say/tell"
+    ]
+  },
+  {
+    "prompt": "He is lying on the bed.",
+    "answer": "O",
+    "explanation": "lie(눕다) 현재분사: lying. (자동사)",
+    "tags": [
+      "lie/lay"
+    ]
+  },
+  {
+    "prompt": "He is laying on the bed.",
+    "answer": "X",
+    "explanation": "lay(놓다)는 타동사 → 목적어 필요. (lay something)",
+    "tags": [
+      "lie/lay"
+    ]
+  },
+  {
+    "prompt": "He sat on the chair.",
+    "answer": "O",
+    "explanation": "sit(앉다)은 자동사.",
+    "tags": [
+      "sit/seat"
+    ]
+  },
+  {
+    "prompt": "He seated on the chair.",
+    "answer": "X",
+    "explanation": "seat(앉히다)는 타동사 → 목적어 필요.",
+    "tags": [
+      "sit/seat"
+    ]
+  },
+  {
+    "prompt": "The host seated the guests.",
+    "answer": "O",
+    "explanation": "seat + 목적어: 손님들을 앉히다.",
+    "tags": [
+      "sit/seat"
+    ]
+  },
+  {
+    "prompt": "Prices are rising rapidly.",
+    "answer": "O",
+    "explanation": "rise는 자동사: (가격이) 오르다.",
+    "tags": [
+      "rise/raise/arise"
+    ]
+  },
+  {
+    "prompt": "The government is rising taxes.",
+    "answer": "X",
+    "explanation": "세금을 '올리다'는 raise(타동사) 사용.",
+    "tags": [
+      "rise/raise/arise"
+    ]
+  },
+  {
+    "prompt": "The government is raising taxes.",
+    "answer": "O",
+    "explanation": "raise는 타동사: 목적어(taxes)를 올리다.",
+    "tags": [
+      "rise/raise/arise"
+    ]
+  },
+  {
+    "prompt": "A new problem has arisen.",
+    "answer": "O",
+    "explanation": "arise(발생하다) 과거분사: arisen.",
+    "tags": [
+      "rise/raise/arise"
+    ]
+  },
+  {
+    "prompt": "The doctor insisted that John lose weight.",
+    "answer": "O",
+    "explanation": "주장/요구/명령/제안 동사 + that절 → 동사 원형(should 생략).",
+    "tags": [
+      "주요명제",
+      "가정법"
+    ]
+  },
+  {
+    "prompt": "The doctor insisted that John loses weight.",
+    "answer": "X",
+    "explanation": "mandative that절에서는 원형 lose 사용.",
+    "tags": [
+      "주요명제",
+      "가정법"
+    ]
+  },
+  {
+    "prompt": "It is necessary that she (should) study hard.",
+    "answer": "O",
+    "explanation": "판단형용사 + that절 → (should) + 동사원형.",
+    "tags": [
+      "주요명제",
+      "가정법"
+    ]
+  },
+  {
+    "prompt": "It is necessary that she studies hard.",
+    "answer": "X",
+    "explanation": "시험형 문법: necessary that절 → study(원형) 사용.",
+    "tags": [
+      "주요명제",
+      "가정법"
+    ]
+  },
+  {
+    "prompt": "The committee recommended that the old rule be abolished.",
+    "answer": "O",
+    "explanation": "that절 수동: be + p.p. (be abolished).",
+    "tags": [
+      "주요명제",
+      "가정법"
+    ]
+  },
+  {
+    "prompt": "The committee recommended that the old rule was abolished.",
+    "answer": "X",
+    "explanation": "mandative that절에서는 was가 아니라 be 원형.",
+    "tags": [
+      "주요명제",
+      "가정법"
+    ]
+  },
+  {
+    "prompt": "He is said to have been a spy during the war.",
+    "answer": "O",
+    "explanation": "과거 사실을 현재에 '말해지다' → be said to have p.p.",
+    "tags": [
+      "수동태",
+      "보고"
+    ]
+  },
+  {
+    "prompt": "He is said to be a spy during the war.",
+    "answer": "X",
+    "explanation": "during the war(과거) 상황이면 to have been이 자연스럽다.",
+    "tags": [
+      "수동태",
+      "보고"
+    ]
+  },
+  {
+    "prompt": "The bridge was believed to have collapsed.",
+    "answer": "O",
+    "explanation": "collapse는 자동사 → to have collapsed(능동) 사용.",
+    "tags": [
+      "수동태",
+      "보고"
+    ]
+  },
+  {
+    "prompt": "The bridge was believed to have been collapsed.",
+    "answer": "X",
+    "explanation": "collapse는 자동사라 수동형(to have been collapsed) 불가.",
+    "tags": [
+      "수동태",
+      "보고"
+    ]
+  },
+  {
+    "prompt": "The file was found to have been deleted.",
+    "answer": "O",
+    "explanation": "삭제 '당함' 의미 → to have been p.p.",
+    "tags": [
+      "수동태",
+      "보고"
+    ]
+  },
+  {
+    "prompt": "The file was found to have deleted.",
+    "answer": "X",
+    "explanation": "file이 삭제하는 주체가 아님 → to have been deleted.",
+    "tags": [
+      "수동태",
+      "보고"
+    ]
+  },
+  {
+    "prompt": "She is such a smart girl.",
+    "answer": "O",
+    "explanation": "such + a/an + 형용사 + 단수명사.",
+    "tags": [
+      "such/so"
+    ]
+  },
+  {
+    "prompt": "She is so smart a girl.",
+    "answer": "O",
+    "explanation": "so + 형용사 + a/an + 단수명사.",
+    "tags": [
+      "such/so"
+    ]
+  },
+  {
+    "prompt": "She is such smart a girl.",
+    "answer": "X",
+    "explanation": "such는 a/an 앞에 와야 함: such a smart girl.",
+    "tags": [
+      "such/so"
+    ]
+  },
+  {
+    "prompt": "She is so a smart girl.",
+    "answer": "X",
+    "explanation": "so는 형용사 바로 앞: so smart a girl / so smart.",
+    "tags": [
+      "such/so"
+    ]
+  },
+  {
+    "prompt": "Almost students passed the exam.",
+    "answer": "X",
+    "explanation": "almost는 부사 → 명사 바로 수식 X. (almost all students)",
+    "tags": [
+      "almost/most"
+    ]
+  },
+  {
+    "prompt": "Almost all students passed the exam.",
+    "answer": "O",
+    "explanation": "almost + all/any/every 등과 함께는 가능.",
+    "tags": [
+      "almost/most"
+    ]
+  },
+  {
+    "prompt": "During the class, he fell asleep.",
+    "answer": "O",
+    "explanation": "during는 전치사 → 뒤에 명사.",
+    "tags": [
+      "전치사vs접속사"
+    ]
+  },
+  {
+    "prompt": "During he was in class, he fell asleep.",
+    "answer": "X",
+    "explanation": "during 뒤에 절(S+V) X → while 사용.",
+    "tags": [
+      "전치사vs접속사"
+    ]
+  },
+  {
+    "prompt": "While he was in class, he fell asleep.",
+    "answer": "O",
+    "explanation": "while은 접속사 → 뒤에 절.",
+    "tags": [
+      "전치사vs접속사"
+    ]
+  }
+]

@@ -47,3 +47,7 @@
 - `sample-data/ox-grammar-extra-cards.json` : 이전에 정리된 추가 카드 묶음
 
 앱에서 **가져오기**로 넣으면 됩니다.
+
+
+## v2 patch
+- Fixed modal close on iOS/Safari by enforcing `[hidden]` display none and bumping service worker cache.

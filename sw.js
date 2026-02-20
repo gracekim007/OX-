@@ -1,4 +1,4 @@
-const CACHE = "ox-wrong-variant-v1";
+const CACHE = "ox-wrong-variant-v2";
 const ASSETS = [
   "./",
   "./index.html",

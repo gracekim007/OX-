@@ -222,3 +222,7 @@ label{font-size:12px; color: var(--muted); font-weight: 800}
   overflow:auto;
 }
 .small{font-size:12px; color: var(--muted); line-height:1.5}
+
+
+/* Ensure hidden modal is actually hidden (author CSS overrides UA hidden) */
+#modal[hidden]{display:none !important;}

@@ -30,16 +30,25 @@ function toast(msg, ms=1600){
 }
 
 function openModal(title, bodyHTML, footerHTML){
+  const modal = $("#modal");
   $("#modal-title").textContent = title;
   $("#modal-body").innerHTML = bodyHTML;
   $("#modal-footer").innerHTML = footerHTML || "";
-  $("#modal").hidden = false;
+  // `hidden` alone can be overridden by author CSS; we also reset display.
+  modal.hidden = false;
+  modal.style.display = "";
   // close handlers
   $$("#modal [data-close]").forEach(b=>{
     b.onclick = () => closeModal();
   });
 }
-function closeModal(){ $("#modal").hidden = true; }
+function closeModal(){
+  const modal = $("#modal");
+  if(!modal) return;
+  modal.hidden = true;
+  // Safety: if CSS accidentally forces display, this guarantees hide.
+  modal.style.display = "none";
+}
 
 function loadSettings(){
   try{
